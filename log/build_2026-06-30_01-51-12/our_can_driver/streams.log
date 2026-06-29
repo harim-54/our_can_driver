@@ -1,0 +1,36 @@
+[0.008s] Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target can_driver_node[0m
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target wheel_odom_node[0m
+[0.060s] [ 25%] [32mBuilding CXX object CMakeFiles/can_driver_node.dir/src/can_driver.cpp.o[0m
+[0.062s] [ 50%] [32mBuilding CXX object CMakeFiles/wheel_odom_node.dir/src/wheel_odom.cpp.o[0m
+[5.099s] [ 75%] [32m[1mLinking CXX executable can_driver_node[0m
+[5.207s] [100%] [32m[1mLinking CXX executable wheel_odom_node[0m
+[5.356s] [100%] Built target can_driver_node
+[5.492s] [100%] Built target wheel_odom_node
+[5.500s] Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
+[5.509s] Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rim/can_ws/build/our_can_driver
+[5.514s] -- Install configuration: ""
+[5.514s] -- Installing: /home/rim/can_ws/install/our_can_driver/lib/our_can_driver/can_driver_node
+[5.516s] -- Set runtime path of "/home/rim/can_ws/install/our_can_driver/lib/our_can_driver/can_driver_node" to ""
+[5.516s] -- Installing: /home/rim/can_ws/install/our_can_driver/lib/our_can_driver/wheel_odom_node
+[5.518s] -- Set runtime path of "/home/rim/can_ws/install/our_can_driver/lib/our_can_driver/wheel_odom_node" to ""
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/include
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver/can_driver.hpp
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver/wheel_odom.hpp
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/package_run_dependencies/our_can_driver
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/parent_prefix_path/our_can_driver
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/ament_prefix_path.sh
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/ament_prefix_path.dsv
+[5.518s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/path.sh
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/path.dsv
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.bash
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.sh
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.zsh
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.dsv
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/package.dsv
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/packages/our_can_driver
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/cmake/our_can_driverConfig.cmake
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/cmake/our_can_driverConfig-version.cmake
+[5.519s] -- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/package.xml
+[5.520s] Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rim/can_ws/build/our_can_driver

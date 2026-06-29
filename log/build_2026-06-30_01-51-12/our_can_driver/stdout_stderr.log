@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target can_driver_node[0m
+[35m[1mConsolidate compiler generated dependencies of target wheel_odom_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/can_driver_node.dir/src/can_driver.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/wheel_odom_node.dir/src/wheel_odom.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable can_driver_node[0m
+[100%] [32m[1mLinking CXX executable wheel_odom_node[0m
+[100%] Built target can_driver_node
+[100%] Built target wheel_odom_node
+-- Install configuration: ""
+-- Installing: /home/rim/can_ws/install/our_can_driver/lib/our_can_driver/can_driver_node
+-- Set runtime path of "/home/rim/can_ws/install/our_can_driver/lib/our_can_driver/can_driver_node" to ""
+-- Installing: /home/rim/can_ws/install/our_can_driver/lib/our_can_driver/wheel_odom_node
+-- Set runtime path of "/home/rim/can_ws/install/our_can_driver/lib/our_can_driver/wheel_odom_node" to ""
+-- Installing: /home/rim/can_ws/install/our_can_driver/include
+-- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver
+-- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver/can_driver.hpp
+-- Installing: /home/rim/can_ws/install/our_can_driver/include/our_can_driver/wheel_odom.hpp
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/package_run_dependencies/our_can_driver
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/parent_prefix_path/our_can_driver
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/ament_prefix_path.sh
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/ament_prefix_path.dsv
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/path.sh
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/environment/path.dsv
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.bash
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.sh
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.zsh
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/local_setup.dsv
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/package.dsv
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/ament_index/resource_index/packages/our_can_driver
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/cmake/our_can_driverConfig.cmake
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/cmake/our_can_driverConfig-version.cmake
+-- Installing: /home/rim/can_ws/install/our_can_driver/share/our_can_driver/package.xml

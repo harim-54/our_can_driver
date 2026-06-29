@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-c4a5339ecf9a2663a1b3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "our_can_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "can_driver_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-can_driver_node-Debug-44805dd885ea05cb9f5f.json",
+					"name" : "can_driver_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "our_can_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-our_can_driver_uninstall-Debug-7cb88f9fb0600083d49e.json",
+					"name" : "our_can_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-0a03b79ae61ef2bc8316.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wheel_odom_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wheel_odom_node-Debug-7502afee691122d32791.json",
+					"name" : "wheel_odom_node",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rim/can_ws/src/our_can_driver/build",
+		"source" : "/home/rim/can_ws/src/our_can_driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,104 @@
+[0.007s] Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rim/can_ws/src/our_can_driver -DCMAKE_INSTALL_PREFIX=/home/rim/can_ws/install/our_can_driver
+[0.064s] -- The C compiler identification is GNU 12.3.0
+[0.109s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.193s] -- Detecting C compiler ABI info - done
+[0.200s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.200s] -- Detecting C compile features
+[0.200s] -- Detecting C compile features - done
+[0.202s] -- Detecting CXX compiler ABI info
+[0.258s] -- Detecting CXX compiler ABI info - done
+[0.263s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.263s] -- Detecting CXX compile features
+[0.263s] -- Detecting CXX compile features - done
+[0.264s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.370s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.429s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.456s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.459s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.465s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.472s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.482s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.509s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.511s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.589s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.614s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.648s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.654s] -- Looking for pthread.h
+[0.732s] -- Looking for pthread.h - found
+[0.732s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.794s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.795s] -- Found Threads: TRUE  
+[0.827s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.836s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.847s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.859s] -- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+[0.865s] -- Found tf2_ros: 0.25.19 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.963s] -- Configuring done
+[0.971s] -- Generating done
+[0.975s] -- Build files have been written to: /home/rim/can_ws/build/our_can_driver
+[0.982s] Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/rim/can_ws/src/our_can_driver -DCMAKE_INSTALL_PREFIX=/home/rim/can_ws/install/our_can_driver
+[0.984s] Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
+[1.028s] [ 25%] [32mBuilding CXX object CMakeFiles/can_driver_node.dir/src/can_driver.cpp.o[0m
+[1.028s] [ 50%] [32mBuilding CXX object CMakeFiles/wheel_odom_node.dir/src/wheel_odom.cpp.o[0m
+[1.157s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:1[m[K:
+[1.157s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/can_driver.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+[1.157s]     1 | #ifndef OUR_CAN_DRIVER__CAN_DRIVER_HPP_
+[1.157s]       | 
+[1.167s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:1[m[K:
+[1.167s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/wheel_odom.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+[1.168s]     1 | #ifndef OUR_CAN_DRIVER__WHEEL_ODOM_HPP_
+[1.168s]       | 
+[2.341s] [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:5:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+[2.341s]     5 | [01;31m[Knamespace[m[K our_can_driver
+[2.341s]       | [01;31m[K^~~~~~~~~[m[K
+[2.341s] [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:177:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.341s]   177 | }
+[2.341s]       |  [01;31m[K^[m[K
+[2.341s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:1[m[K:
+[2.341s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/can_driver.hpp:25:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.341s]    25 | [01;36m[K{[m[K
+[2.341s]       | [01;36m[K^[m[K
+[2.343s] [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:177:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[2.343s]   177 | }
+[2.343s]       |  [01;31m[K^[m[K
+[2.343s] [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:177:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.343s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/can_driver.cpp:1[m[K:
+[2.343s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/can_driver.hpp:15:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.343s]    15 | [01;36m[K{[m[K
+[2.343s]       | [01;36m[K^[m[K
+[2.373s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:1[m[K:
+[2.373s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/wheel_odom.hpp:47:42:[m[K [01;31m[Kerror: [m[K‘[01m[KJ[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’
+[2.373s]    47 |   rclcpp::Subscription<sensor_msgs::msg::[01;31m[KJ[m[K
+[2.373s]       |                                          [01;31m[K^[m[K
+[2.373s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:4:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.373s]     4 | namespace [01;31m[Kour_can_driver[m[K
+[2.374s]       |           [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:4:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:4:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:4:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:5:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+[2.374s]     5 | [01;31m[K{[m[K
+[2.374s]       | [01;31m[K^[m[K
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:102:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.374s]   102 | }
+[2.374s]       |  [01;31m[K^[m[K
+[2.374s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:1[m[K:
+[2.374s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/wheel_odom.hpp:22:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.374s]    22 | [01;36m[K{[m[K
+[2.374s]       | [01;36m[K^[m[K
+[2.376s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:102:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[2.376s]   102 | }
+[2.376s]       |  [01;31m[K^[m[K
+[2.376s] [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:102:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.376s] In file included from [01m[K/home/rim/can_ws/src/our_can_driver/src/wheel_odom.cpp:1[m[K:
+[2.376s] [01m[K/home/rim/can_ws/src/our_can_driver/include/our_can_driver/wheel_odom.hpp:11:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.376s]    11 | [01;36m[K{[m[K
+[2.376s]       | [01;36m[K^[m[K
+[2.594s] gmake[2]: *** [CMakeFiles/can_driver_node.dir/build.make:76: CMakeFiles/can_driver_node.dir/src/can_driver.cpp.o] Error 1
+[2.594s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/can_driver_node.dir/all] Error 2
+[2.594s] gmake[1]: *** Waiting for unfinished jobs....
+[2.631s] gmake[2]: *** [CMakeFiles/wheel_odom_node.dir/build.make:76: CMakeFiles/wheel_odom_node.dir/src/wheel_odom.cpp.o] Error 1
+[2.631s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/wheel_odom_node.dir/all] Error 2
+[2.631s] gmake: *** [Makefile:146: all] Error 2
+[2.633s] Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
