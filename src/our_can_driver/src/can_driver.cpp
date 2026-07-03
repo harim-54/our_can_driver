@@ -309,6 +309,11 @@ void CanDriver::toWheelRPM(
 
   rpm_left  = v_left  / (2.0f * M_PI * wheel_radius_) * 60.0f * gear_ratio_;
   rpm_right = v_right / (2.0f * M_PI * wheel_radius_) * 60.0f * gear_ratio_;
+
+  const float max_rpm = 50.0f; //보수적 세팅 나중에 바꿔라 하림아.
+
+  rpm_left = std::clamp(rpm_left, -max_rpm, max_rpm);
+  rpm_right = std::clamp(rpm_right, -max_rpm, max_rpm);
 }
 
 }  // namespace our_can_driver
