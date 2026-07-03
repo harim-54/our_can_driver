@@ -1,0 +1,4 @@
+Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
+Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rim/can_ws/build/our_can_driver -- -j28 -l28
+Invoking command in '/home/rim/can_ws/build/our_can_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rim/can_ws/build/our_can_driver
+Invoked command in '/home/rim/can_ws/build/our_can_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rim/can_ws/build/our_can_driver

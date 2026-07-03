@@ -1,1 +1,1 @@
-rclcpp;geometry_msgs;sensor_msgs;nav_msgs;tf2;tf2_ros
+rclcpp;geometry_msgs;sensor_msgs;joy;nav_msgs;tf2;tf2_ros

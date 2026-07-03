@@ -4,6 +4,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/twist.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
+#include <sensor_msgs/msg/joy.hpp>
 
 #include <linux/can.h>
 #include <linux/can/raw.h>
@@ -14,13 +15,6 @@
 namespace our_can_driver
 {
 
-/**
- * @class CanDriver
- * @brief RMD-X8-120 CAN 통신 드라이버
- *
- * /cmd_vel 구독 → CAN으로 모터 명령
- * CAN에서 RPM 읽기 → /joint_states 발행
- */
 class CanDriver : public rclcpp::Node
 {
 public:
@@ -28,22 +22,12 @@ public:
   ~CanDriver();
 
 private:
-  // CAN 소켓 초기화
   bool initCAN(const std::string & can_interface);
-
-  // 모터에 속도 명령 전송
   void sendVelocity(int motor_id, float rpm);
-
-  // 모터 피드백 읽기
   void readFeedback();
-
-  // /cmd_vel 콜백
   void cmdVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg);
-
-  // 타이머 콜백 (주기적 피드백 읽기)
+  void joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg);
   void timerCallback();
-
-  // vx, wz → 좌우 RPM 변환
   void toWheelRPM(
     float vx, float wz,
     float & rpm_left, float & rpm_right);
@@ -54,9 +38,15 @@ private:
   // 파라미터
   int left_motor_id_{1};
   int right_motor_id_{2};
-  float track_width_{0.5f};
-  float wheel_radius_{0.1f};
+  int flipper_motor_id_{3};
+  float track_width_{0.4904f};
+  float wheel_radius_{0.225f};
   float gear_ratio_{6.0f};
+  float flipper_speed_{50.0f};  // 플리퍼 속도 RPM
+
+  // 버튼 인덱스 (조이스틱 설정에 따라 변경)
+  int flipper_up_button_{4};    // L1 버튼
+  int flipper_down_button_{5};  // R1 버튼
 
   // 현재 RPM
   float rpm_left_{0.0f};
@@ -64,6 +54,7 @@ private:
 
   // ROS2
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
+  rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_states_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
 };
