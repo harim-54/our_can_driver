@@ -1,4 +1,0 @@
-source;share/our_can_driver/local_setup.bash
-source;share/our_can_driver/local_setup.dsv
-source;share/our_can_driver/local_setup.sh
-source;share/our_can_driver/local_setup.zsh
