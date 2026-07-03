@@ -5,6 +5,7 @@
 #include <geometry_msgs/msg/twist.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <sensor_msgs/msg/joy.hpp>
+#include <std_msgs/msg/bool.hpp>
 
 #include <linux/can.h>
 #include <linux/can/raw.h>
@@ -15,6 +16,16 @@
 namespace our_can_driver
 {
 
+enum class DriveMode {
+  MANUAL,      // 수동 모드
+  AUTONOMOUS   // 자율주행 모드
+};
+
+enum class FlipperMode {
+  VELOCITY,    // 속도 모드 (누르는 동안 회전)
+  POSITION     // 위치 모드 (버튼 한 번에 목표 각도)
+};
+
 class CanDriver : public rclcpp::Node
 {
 public:
@@ -24,6 +35,7 @@ public:
 private:
   bool initCAN(const std::string & can_interface);
   void sendVelocity(int motor_id, float rpm);
+  void sendPosition(int motor_id, float degree);
   void readFeedback();
   void cmdVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg);
   void joyCallback(const sensor_msgs::msg::Joy::SharedPtr msg);
@@ -42,13 +54,38 @@ private:
   float track_width_{0.4904f};
   float wheel_radius_{0.225f};
   float gear_ratio_{6.0f};
-  float flipper_speed_{50.0f};  // 플리퍼 속도 RPM
+  float flipper_speed_{50.0f};
+  float flipper_position_step_{30.0f};  // 위치 모드 한 번에 30도
+  float flipper_max_degree_{90.0f};     // 플리퍼 최대 각도
+  float flipper_min_degree_{-90.0f};    // 플리퍼 최소 각도
 
-  // 버튼 인덱스 (조이스틱 설정에 따라 변경)
-  int flipper_up_button_{4};    // L1 버튼
-  int flipper_down_button_{5};  // R1 버튼
+  // PS4 버튼 인덱스
+  // buttons
+  const int BTN_L1      = 4;   // 플리퍼 올림
+  const int BTN_R1      = 5;   // 플리퍼 내림
+  const int BTN_SHARE   = 8;   // 수동/자율주행 전환
+  const int BTN_OPTIONS = 9;   // 플리퍼 속도/위치 모드 전환
+  const int BTN_PS      = 10;  // 비상 정지
 
-  // 현재 RPM
+  // axes
+  const int AXIS_LEFT_X = 0;   // 왼쪽 스틱 좌우 (wz)
+  const int AXIS_LEFT_Y = 1;   // 왼쪽 스틱 상하 (vx)
+
+  // 현재 모드
+  DriveMode drive_mode_{DriveMode::MANUAL};
+  FlipperMode flipper_mode_{FlipperMode::VELOCITY};
+
+  // 이전 버튼 상태 (토글용)
+  int prev_btn_l1_{0};
+  int prev_btn_r1_{0};
+  int prev_btn_share_{0};
+  int prev_btn_options_{0};
+  int prev_btn_ps_{0};
+
+  // 현재 플리퍼 각도 (위치 모드용)
+  float flipper_current_degree_{0.0f};
+
+  // 현재 RPM 피드백
   float rpm_left_{0.0f};
   float rpm_right_{0.0f};
 
@@ -56,6 +93,7 @@ private:
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
   rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_states_pub_;
+  rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr auto_mode_pub_;
   rclcpp::TimerBase::SharedPtr timer_;
 };
 
